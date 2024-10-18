@@ -1,0 +1,34 @@
+# general
+site: "A3BA"
+rootroot: "/panfs/ccds02/nobackup/people/sberton2/RING/code/sfs_helper/examples/HLS/A3BA/"
+local: false
+
+# software paths
+isisdir : "/home/sberton2/nobackup/.conda/envs/isis72/"
+isisdata : "/home/sberton2/nobackup/isis-data/"
+aspdir : "/explore/nobackup/people/sberton2/.local/opt/StereoPipeline-3.3.0-Linux/"
+
+# dem and crs
+crs_stereo_meters: "../aux/lunar_stereo_sp_meters.wkt"
+prioridem_full : "/explore/nobackup/people/mkbarker/GCD/grid/20mpp/v4/public/final/LDEM_83S_10MPP_ADJ.TIF"
+
+# input images
+nimg_to_select: 20
+min_resolution: 1.5
+imglist_full: "root/lnac_A3{{ tileid }}.in"
+datadir: '/home/sberton2/nobackup/RING/data/LROC/'
+source_url: 'https://pds.lroc.asu.edu/data/'
+resample_images: true
+
+# selection options
+pixels_per_cell_per_side: 100
+targetmpp: 5
+pds_index_path: "/explore/nobackup/projects/pgda/LRO/data/LROC/"
+pds_index_name: "CUMINDEX"
+resolution_name: 'RESOLUTION'
+calibrate: 'lrocnac'
+input_shp : "/explore/nobackup/people/sberton2/RING/code/sfs_helper/examples/HLS/A3BA/root/clip_A3{{ tileid }}.shp"
+
+# sfs options
+sfs_smoothness_weight: 0.02
+sfs_initial_dem_constraint_weight: 1e-3

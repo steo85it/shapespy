@@ -1,0 +1,74 @@
+# general
+# -------
+local: false
+debug: false
+download: false
+config_file: "config.json"
+calibrate: null
+site: null
+tileid: 0
+steps_to_run: '111111111'
+nodes_list: 'default_nodes_list.txt'
+use_csm: true
+
+# dem and crs
+# -----------
+input_shp: null
+input_tif: null
+boxcentersfil: null
+lonlat: false
+prioridem_full: null
+xyzi_full: null
+crs_lonlat: "+proj=lonlat +units=m +a=1737.4e3 +b=1737.4e3 +no_defs"
+crs_stereo: "+proj=stere +lat_0=-90 +lon_0=0 +lat_ts=-90 +k=1 +x_0=0 +y_0=0 +units=km +a=1737.4e3 +b=1737.4e3 +no_defs"
+crs_stereo_meters: "../aux/lunar_stereo_sp_meters.wkt"
+
+# input images
+# ------------
+pds_index_name: null
+pds_index_path: null
+import_index: false
+imglist_full: null
+nimg_to_select: null
+imgs_to_remove: []
+latrange: [-90, -60]
+source_url: null
+resample_images: false
+
+# dir paths
+# ---------
+rootroot: null
+rootdir: null
+procroot: null
+datadir: null
+sfsdir: null
+
+# selection options
+# -----------------
+square_grid: false
+cells_per_row: 24
+size_of_cells: null
+pixels_per_cell_per_side: 20
+lon_step: 30
+min_resolution: null
+max_slew: 2
+resolution_name: null
+sel: 0
+
+# ba+sfs options
+# -----------
+config_ba_path: ""
+sfs_smoothness_weight: -1
+sfs_initial_dem_constraint_weight: -1
+targetmpp: 1
+ba_reduction_factor: 1
+threshold_bad_image: 0.5 # meters
+min_count: 100
+shadow_threshold: 0.002
+rendering_resolution: 2
+
+# asp+isis paths
+# --------------
+isisdir: "/home/sberton2/nobackup/.conda/envs/isis72/"
+isisdata: "/home/sberton2/nobackup/isis-data/"
+aspdir: "/home/sberton2/nobackup/.local/opt/StereoPipeline-3.3.0-Linux/"
